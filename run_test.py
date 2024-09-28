@@ -38,5 +38,5 @@ def compile_and_run_c_program(c_file):
 
     print(f"\033[93m{output_lines[-1]}\033[0m")
 
-c_file = 'conv_template.c' 
+c_file = 'conv_sequential.c' 
 compile_and_run_c_program(c_file)
