@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <omp.h>
 
 int main() {
     // clock_t start_time = clock();
@@ -26,9 +27,11 @@ int main() {
     int result_size = NA - NF + 1;
     int *R = malloc(sizeof(int) * result_size);
 
+    #pragma omp parallel for
     for (int i = 0; i < result_size; i++) {
         int sum = 0;
 
+        #pragma omp simd reduction(+:sum)
         for (int j = 0; j < NF; j++) {
             sum += A[i + j] * F[j];
         }
