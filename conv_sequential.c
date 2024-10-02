@@ -1,10 +1,10 @@
 #pragma GCC optimize ("O3")
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+// #include <time.h>
 
 int main() {
-    clock_t start_time = clock();
+    // clock_t start_time = clock();
 
     // ---- input and malloc A, F ----
     int NA, NF;
@@ -47,8 +47,8 @@ int main() {
     free(R);
     // ---- end free ----
 
-    clock_t end_time = clock();
-    double cpu_time_used = ((double)(end_time - start_time)) / CLOCKS_PER_SEC;
-    printf("CPU time used: %.6f seconds\n", cpu_time_used);
+    // clock_t end_time = clock();
+    // double cpu_time_used = ((double)(end_time - start_time)) / CLOCKS_PER_SEC;
+    // printf("CPU time used: %.6f seconds\n", cpu_time_used);
     return 0;
 }
